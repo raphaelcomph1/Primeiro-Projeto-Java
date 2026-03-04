@@ -27,7 +27,7 @@ public class MaquinaDeLavar {
 	    System.out.println("Seu limite de Watts por hora foi definido em: " + this.WattsPorHoraDesejado);
 	}
 	
-	public void ConsumoDaPassagem(double energiaUtilizada) {
+	public void ConsumoDaLavagem(double energiaUtilizada) {
 	    // Regra de negócio: O custo deve ser positivo e o saldo deve ser suficiente
 	    if (energiaUtilizada <= 0) {
 	        System.out.println("Erro: A quantidade de energia desejada é inválida.");
