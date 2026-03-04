@@ -4,34 +4,27 @@ package br.com.fiapride.main;
 import br.com.fiapride.model.MaquinaDeLavar;
 
 public class SistemaPrincipal {
-
-    public static void main(String[] args) {
-        // INSTANCIAÇÃO
-        // O comando 'new' aloca memória para um novo objeto.
-        // Criando a primeira maquina e seguindo com novos exemplos (Objeto 1)
-        MaquinaDeLavar maquina1 = new MaquinaDeLavar();
-        maquina1.MaterialCorpo = "Aço";
-        maquina1.Voltagem = 110;
-        maquina1.PesoDaMaquina = 45.6;
-
-        MaquinaDeLavar maquina2 = new MaquinaDeLavar();
-        maquina2.MaterialCorpo = "Plastico";
-        maquina2.Voltagem = 220;
-        maquina2.PesoDaMaquina = 60.5;
-
-        MaquinaDeLavar maquina3 = new MaquinaDeLavar();
-        maquina3.MaterialCorpo = "Inox";
-        maquina3.Voltagem = 110;
-        maquina3.PesoDaMaquina = 55.2;
-
-
-
-        // Exibindo os dados no Console
-        System.out.println("--- Sistema FiapRide ---");
-        System.out.println("Material da Maquina: " + maquina1.MaterialCorpo + " | Voltagem da Maquina: " + maquina1.Voltagem + "V | Peso da Maquina: " + maquina1.PesoDaMaquina);
-        System.out.println("Material da Maquina: " + maquina2.MaterialCorpo + " | Voltagem da Maquina: " + maquina2.Voltagem + "V | Peso da Maquina: " + maquina2.PesoDaMaquina);
-        System.out.println("Material da Maquina: " + maquina3.MaterialCorpo + " | Voltagem da Maquina: " + maquina3.Voltagem + "V | Peso da Maquina: " + maquina3.PesoDaMaquina);
-        // Oq falta para evoluir esse codigo?
-        // Uma identificacao de qm e dono de cada maquina talvez 
-    }
-}
+	public static void main(String[] args) {
+	    // INSTANCIAÇÃO
+	    // O comando 'new' aloca memória para um novo objeto.
+	    // Criando o primeiro passageiro (Objeto 1)
+		MaquinaDeLavar maquina1 = new MaquinaDeLavar("Aço",45.6,110, 6.0, 0); 
+	    System.out.println("Aumento do Consumo desejado aumentado");
+	    maquina1.adicionarConsumo(1000);
+	
+	    // Criando o segundo passageiro (Objeto 2)
+	    MaquinaDeLavar maquina2 = new MaquinaDeLavar("Plastico",56.6,220, 10.2, 0); 
+	    System.out.println("Aumento do Consumo desejado aumentado");
+	    maquina2.adicionarConsumo(2000);
+	
+	    System.out.println("--- Sistema FiapRide ---");
+	    System.out.println("Maquina1: " + maquina1.MaterialCorpo + " | Voltagem: " + maquina1.Voltagem + " | Energia desejada: " + maquina1.WattsPorHoraDesejado);
+	    System.out.println("Maquina1: " + maquina2.MaterialCorpo + " | Voltagem: " + maquina2.Voltagem + " | Energia desejada: " + maquina2.WattsPorHoraDesejado);
+	    
+	    System.out.println("A lavagem foi realizada");
+	    maquina1.ConsumoDaPassagem(500);
+	    System.out.println("A lavagem foi realizada");
+	    maquina2.ConsumoDaPassagem(1500);
+	
+	}
+	}
