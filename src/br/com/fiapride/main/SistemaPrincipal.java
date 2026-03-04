@@ -22,9 +22,9 @@ public class SistemaPrincipal {
 	    System.out.println("Maquina1: " + maquina2.MaterialCorpo + " | Voltagem: " + maquina2.Voltagem + " | Energia desejada: " + maquina2.WattsPorHoraDesejado);
 	    
 	    System.out.println("A lavagem foi realizada");
-	    maquina1.ConsumoDaPassagem(500);
+	    maquina1.ConsumoDaLavagem(500);
 	    System.out.println("A lavagem foi realizada");
-	    maquina2.ConsumoDaPassagem(1500);
+	    maquina2.ConsumoDaLavagem(1500);
 	
 	}
 	}
