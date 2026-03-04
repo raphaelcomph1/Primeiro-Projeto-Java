@@ -20,7 +20,7 @@ public class MaquinaDeLavar {
 	public void adicionarConsumo(int ConsumoWatts) {
 	    // Regra de negócio: O valor da recarga deve ser positivo
 	    if (ConsumoWatts <= 0) {
-	        System.out.println("Erro: A quantidade de energia desejado é inválida.");
+	        System.out.println("Erro: A quantidade de energia desejada é inválida.");
 	        return;
 	    }
 	    this.WattsPorHoraDesejado += ConsumoWatts;
@@ -30,7 +30,7 @@ public class MaquinaDeLavar {
 	public void ConsumoDaPassagem(double energiaUtilizada) {
 	    // Regra de negócio: O custo deve ser positivo e o saldo deve ser suficiente
 	    if (energiaUtilizada <= 0) {
-	        System.out.println("Erro: A quantidade de energia desejado é inválida.");
+	        System.out.println("Erro: A quantidade de energia desejada é inválida.");
 	        return;
 	    }
 	    if (this.WattsPorHoraDesejado < energiaUtilizada) {
