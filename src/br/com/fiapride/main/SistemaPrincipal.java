@@ -15,16 +15,16 @@ public class SistemaPrincipal {
 	    // Criando o segundo passageiro (Objeto 2)
 	    MaquinaDeLavar maquina2 = new MaquinaDeLavar("Plastico",56.6,220, 10.2, 0); 
 	    System.out.println("Aumento do Consumo desejado aumentado");
-	    maquina2.adicionarConsumo(2000);
+	    maquina2.adicionarConsumo(4000);
 	
 	    System.out.println("--- Sistema FiapRide ---");
-	    System.out.println("Maquina1: " + maquina1.MaterialCorpo + " | Voltagem: " + maquina1.Voltagem + " | Energia desejada: " + maquina1.WattsPorHoraDesejado);
-	    System.out.println("Maquina1: " + maquina2.MaterialCorpo + " | Voltagem: " + maquina2.Voltagem + " | Energia desejada: " + maquina2.WattsPorHoraDesejado);
+	    System.out.println("Maquina1: " + maquina1.getMaterialCorpo() + " | Voltagem: " + maquina1.getVoltagem() + " | Energia desejada: " + maquina1.getWattsPorHoraDesejado());
+	    System.out.println("Maquina1: " + maquina2.getMaterialCorpo() + " | Voltagem: " + maquina2.getVoltagem() + " | Energia desejada: " + maquina2.getWattsPorHoraDesejado());
 	    
 	    System.out.println("A lavagem foi realizada");
-	    maquina1.ConsumoDaLavagem(500);
+	    maquina1.consumoDaLavagem(500);
 	    System.out.println("A lavagem foi realizada");
-	    maquina2.ConsumoDaLavagem(1500);
+	    maquina2.consumoDaLavagem(1500);
 	
 	}
 	}
