@@ -67,3 +67,7 @@ Para efetuar a lavagem:
 ```
 maquina1.ConsumoDaLavagem(500);
 ```
+<br>
+
+## Print Astah
+![alt text](<astah print.png>)
