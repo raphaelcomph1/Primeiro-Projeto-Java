@@ -10,9 +10,9 @@ public class MaquinaDeLavar {
 
     public MaquinaDeLavar(String materialCorpo, double pesoDaMaquina, int voltagem, double pesoSuportado, int valor) {
         this.setMaterialCorpo(materialCorpo) ;
-        this.setPesoDaMaquina(pesoDaMaquina);
+        //this.setPesoDaMaquina(pesoDaMaquina);
         this.setVoltagem(voltagem);
-        this.setPesoSuportado(pesoSuportado);
+        //this.setPesoSuportado(pesoSuportado);
         this.setWattsPorHoraDesejado(valor); 
     }
 
