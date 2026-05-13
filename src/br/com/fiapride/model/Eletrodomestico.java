@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class Eletrodomestico {
+public abstract class Eletrodomestico {
     private String marca;
     private int voltagem;
     private double wattsDisponiveis;
@@ -28,9 +28,7 @@ public class Eletrodomestico {
         this.voltagem = voltagem;
     }
 
-    public void realizarTarefa(double energiaNecessaria) {
-        System.out.println("Fazendo uma acao generica");
-    }
+    public abstract void realizarTarefa(double energia);
 
     public void adicionarEnergia(int watts) {
         if (watts > 0) {

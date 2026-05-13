@@ -40,10 +40,14 @@ public class SistemaPrincipal {
 
 		maquina1.adicionarEnergia(1000);
 		geladeira1.adicionarEnergia(500);
+		maquina1.realizarTarefa(100);
 
 		maquina1.realizarTarefa(300);
 		geladeira1.realizarTarefa(150);
 		System.out.println("-------");
+
+		//teste do abstract
+		//Eletrodomestico teste = new Eletrodomestico("Marca X", 110);
 
 
 

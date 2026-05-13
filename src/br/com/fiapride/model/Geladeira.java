@@ -21,4 +21,5 @@ public class Geladeira extends Eletrodomestico{
             System.out.println("Alerta: Geladeira sem energia!");
         }
     }
+
 }
