@@ -1,4 +1,4 @@
 package br.com.fiapride.model;
 
-public class Passageiro {
+public class Motor {
 }
