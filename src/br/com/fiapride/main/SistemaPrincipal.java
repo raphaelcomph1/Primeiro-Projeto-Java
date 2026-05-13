@@ -8,13 +8,11 @@ public class SistemaPrincipal {
 	    // INSTANCIAÇÃO
 	    // O comando 'new' aloca memória para um novo objeto.
 	    // Criando o primeiro passageiro (Objeto 1)
-		MaquinaDeLavar maquina1 = new MaquinaDeLavar("Aço",110,0); 
-	    System.out.println("Aumento do Consumo desejado aumentado");
+		MaquinaDeLavar maquina1 = new MaquinaDeLavar("Aço", 110.0, 110, 10.5, 0);	    System.out.println("Aumento do Consumo desejado aumentado");
 	    maquina1.adicionarConsumo(1000);
 	
 	    // Criando o segundo passageiro (Objeto 2)
-	    MaquinaDeLavar maquina2 = new MaquinaDeLavar("Plastico",220, 0); 
-	    System.out.println("Aumento do Consumo desejado aumentado");
+		MaquinaDeLavar maquina2 = new MaquinaDeLavar("Plastico", 80.0, 220, 8.0, 0);	    System.out.println("Aumento do Consumo desejado aumentado");
 	    maquina2.adicionarConsumo(4000);
 	
 	    System.out.println("--- Sistema FiapRide ---");
