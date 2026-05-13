@@ -1,36 +1,24 @@
 package br.com.fiapride.main;
-
-import br.com.fiapride.model.Passageiro;
+import br.com.fiapride.model.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SistemaPrincipalPassageiro {
-
     public static void main(String[] args) {
-        
-        System.out.println("--- Iniciando o Sistema FiapRide --- \n");
-        
-        // INSTANCIAÇÃO (Usando o Construtor!)
-        // Não precisamos mais de passageiro.nome = "Ana", já passamos tudo de uma vez.
-        Passageiro passageiro1 = new Passageiro("Ana Silva", "222.222.222-22");
-        System.out.println(">>> Recarga Passageiro 1:");
-        passageiro1.adicionarSaldo(50.0);
 
-        Passageiro passageiro2 = new Passageiro("Carlos Souza", "333.333.333-33");
-        System.out.println(">>> Recarga Passageiro 2:");
-        passageiro2.adicionarSaldo(12.5);
-
-        System.out.println("\n--- Status dos Passageiros ---");
-        // Lendo os dados com os Getters:
-        System.out.println("Passageiro: " + passageiro1.getNome() + " | Saldo: R$ " + passageiro1.getSaldo() + " | CPF: " + passageiro1.getCpf());
-        System.out.println("Passageiro: " + passageiro2.getNome() + " | Saldo: R$ " + passageiro2.getSaldo() + " | CPF: " + passageiro2.getCpf());
-        
-        System.out.println("\n--- Realizando Viagens ---");
-        System.out.println("Pagando viagem do passageiro 1 (Ana)...");
-        passageiro1.pagarViagem(20.0); // Ana tem 50, vai sobrar 30.
-        
-        System.out.println("\nPagando viagem do passageiro 2 (Carlos)...");
-        passageiro2.pagarViagem(20.0); // Carlos tem 12.5. O sistema DEVE bloquear!
-        
-        // Tente hackear o sistema descomentando a linha abaixo:
-        // passageiro1.saldo = 999999.0; // O Java vai exibir erro vermelho! A proteção funcionou!
+        // 1. Criamos uma lista da SUPERCLASSE. Ela aceita qualquer herdeiro!
+        List<Veiculo> frota = new ArrayList<>();
+        // 2. Colocamos 50 litros em ambos os veículos
+        frota.add(new Carro("ABC-1234", "Honda Civic"));
+        frota.add(new Moto("DEF-5678", "Honda CG 160"));
+        System.out.println("--- ⛽ RELATÓRIO DE AUTONOMIA DA FROTA ---");
+        // 3. A MÁGICA: O mesmo comando produz resultados diferentes!
+        for (Veiculo veiculo : frota) {
+            System.out.println("Veículo: " + veiculo.getModelo());
+            // O Java é inteligente: se for Carro, usa a conta do carro. Se for Moto, usa a da moto.
+            veiculo.abaster(50);
+            System.out.println(veiculo.calcularAutonomia());
+            System.out.println("---------------------------------------");
+        }
     }
 }
