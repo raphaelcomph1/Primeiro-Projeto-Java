@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class MaquinaDeLavar extends Eletrodomestico{
+public class MaquinaDeLavar extends Eletrodomestico implements Notificavel{
 
     private String materialCorpo;
     private Motor intermediador;
@@ -31,6 +31,10 @@ public class MaquinaDeLavar extends Eletrodomestico{
         } else {
             System.out.println("Erro: Energia insuficiente na máquina.");
         }
+    }
+    @Override
+    public void enviarNotificacao(String mensagem) {
+        System.out.println("[App Casa] Notificação da Máquina: " + mensagem);
     }
 }
 

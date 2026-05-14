@@ -12,7 +12,6 @@ public abstract class Veiculo {
         this.modelo = modelo;
     }
 
-    //add essas duas funcoes pro codigo funfar!
     public abstract String calcularAutonomia();
     public double getNivelCombustivel() {
         return this.nivelCombustivel;

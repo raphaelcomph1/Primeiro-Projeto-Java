@@ -4,18 +4,19 @@ package br.com.fiapride.main;
 import br.com.fiapride.model.MaquinaDeLavar;
 import br.com.fiapride.model.Motor;
 import br.com.fiapride.model.Geladeira;
+import br.com.fiapride.model.Notificavel;
+import br.com.fiapride.model.Carro;
 
 public class SistemaPrincipal {
 	public static void main(String[] args) {
-	    // INSTANCIAÇÃO
-	    // O comando 'new' aloca memória para um novo objeto.
-	    // Criando o primeiro passageiro (Objeto 1)
+
+		Carro carro1 = new Carro("ABC-1234","Celta");
+
 		Motor motor1 = new Motor("Weg",  1525 , 800 );
 		MaquinaDeLavar maquina1 = new MaquinaDeLavar("LG",110, "Aco",  motor1);
 		Geladeira geladeira1 = new Geladeira("Electrolux", 110, false);
 
 	
-	    // Criando o segundo passageiro (Objeto 2)
 		Motor motor2 = new Motor("LG",  1225 , 600 );
 	    MaquinaDeLavar maquina2 = new MaquinaDeLavar("Electrolux",220, "Plastico", motor2);
 		Geladeira geladeira2 = new Geladeira("Electrolux", 110, true);
@@ -49,7 +50,16 @@ public class SistemaPrincipal {
 		//teste do abstract
 		//Eletrodomestico teste = new Eletrodomestico("Marca X", 110);
 
+		System.out.println("--- Teste de Interface ---");
 
+
+		Notificavel item1 = maquina1;
+		Notificavel item2 = carro1;
+
+		item1.enviarNotificacao("A roupa está limpa!");
+		item2.enviarNotificacao("O tanque está na reserva!");
+
+		System.out.println("-------------------------------------");
 
 	}
 	}

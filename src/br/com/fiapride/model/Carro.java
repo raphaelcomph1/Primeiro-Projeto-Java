@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class Carro extends Veiculo {
+public class Carro extends Veiculo implements Notificavel {
 
     private int capacidadePassageiros;
 
@@ -28,5 +28,9 @@ public class Carro extends Veiculo {
 
     private void setCapacidadePassageiros(int capacidadePassageiros) {
         this.capacidadePassageiros = capacidadePassageiros;
+    }
+    @Override
+    public void enviarNotificacao(String mensagem) {
+        System.out.println("[App Carro] Alerta do Veículo: " + mensagem);
     }
 }
